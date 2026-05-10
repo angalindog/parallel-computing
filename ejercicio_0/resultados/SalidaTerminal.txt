@@ -1,0 +1,87 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+Prueba la nueva tecnología PowerShell multiplataforma https://aka.ms/pscore6
+
+PS D:\Almacenamiento_W\Documentos\Educacion\UNAL\Semestre 6\Asignaturas\Computación paralela y distribuida\Trabajo\ejercicio_0> mvn -v
+Apache Maven 3.9.15 (98b2cdbfdb5f1ac8781f537ea9acccaed7922349)
+Maven home: D:\IDE_TOOLS\Maven\apache-maven-3.9.15-bin\apache-maven-3.9.15
+Java version: 21.0.9, vendor: Eclipse Adoptium, runtime: D:\IDE_TOOLS\Java\jdk-21.0.9
+Default locale: es_CO, platform encoding: UTF-8
+OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
+PS D:\Almacenamiento_W\Documentos\Educacion\UNAL\Semestre 6\Asignaturas\Computación paralela y distribuida\Trabajo\ejercicio_0> mvn clean compile
+[INFO]
+[INFO] ------------------< co.edu.unal.paralela:ejercicio_0 >------------------
+[INFO] Building ejercicio_0 0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from pcdp-repo: https://raw.github.com/habanero-maven/hjlib-maven-repo/mvn-repo-pcdp-0.0.4-SNAPSHOT/edu/rice/pcdp/pcdp-core/0.0.4-SNAPSHOT/maven-metadata.xml
+Downloaded from pcdp-repo: https://raw.github.com/habanero-maven/hjlib-maven-repo/mvn-repo-pcdp-0.0.4-SNAPSHOT/edu/rice/pcdp/pcdp-core/0.0.4-SNAPSHOT/maven-metadata.xml (772 B at 451 B/s)
+[INFO]
+[INFO] --- clean:3.2.0:clean (default-clean) @ ejercicio_0 ---
+[INFO] Deleting D:\Almacenamiento_W\Documentos\Educacion\UNAL\Semestre 6\Asignaturas\Computación paralela y distribuida\Trabajo\ejercicio_0\target
+[INFO]
+[INFO] --- resources:3.4.0:resources (default-resources) @ ejercicio_0 ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO]
+[INFO] --- compiler:3.1:compile (default-compile) @ ejercicio_0 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to D:\Almacenamiento_W\Documentos\Educacion\UNAL\Semestre 6\Asignaturas\Computación paralela y distribuida\Trabajo\ejercicio_0\target\classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.496 s
+[INFO] Finished at: 2026-05-10T06:23:51-05:00
+[INFO] ------------------------------------------------------------------------
+PS D:\Almacenamiento_W\Documentos\Educacion\UNAL\Semestre 6\Asignaturas\Computación paralela y distribuida\Trabajo\ejercicio_0> mvn clean test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------< co.edu.unal.paralela:ejercicio_0 >------------------
+[INFO] Building ejercicio_0 0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from pcdp-repo: https://raw.github.com/habanero-maven/hjlib-maven-repo/mvn-repo-pcdp-0.0.4-SNAPSHOT/edu/rice/pcdp/pcdp-core/0.0.4-SNAPSHOT/maven-metadata.xml
+Downloaded from pcdp-repo: https://raw.github.com/habanero-maven/hjlib-maven-repo/mvn-repo-pcdp-0.0.4-SNAPSHOT/edu/rice/pcdp/pcdp-core/0.0.4-SNAPSHOT/maven-metadata.xml (772 B at 794 B/s)
+[INFO]
+[INFO] --- clean:3.2.0:clean (default-clean) @ ejercicio_0 ---
+[INFO] Deleting D:\Almacenamiento_W\Documentos\Educacion\UNAL\Semestre 6\Asignaturas\Computación paralela y distribuida\Trabajo\ejercicio_0\target
+[INFO]
+[INFO] --- resources:3.4.0:resources (default-resources) @ ejercicio_0 ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO]
+[INFO] --- compiler:3.1:compile (default-compile) @ ejercicio_0 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to D:\Almacenamiento_W\Documentos\Educacion\UNAL\Semestre 6\Asignaturas\Computación paralela y distribuida\Trabajo\ejercicio_0\target\classes
+[INFO]
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ ejercicio_0 ---
+[INFO] skip non existing resourceDirectory D:\Almacenamiento_W\Documentos\Educacion\UNAL\Semestre 6\Asignaturas\Computación paralela y distribuida\Trabajo\ejercicio_0\src\test\resources
+[INFO]
+[INFO] --- compiler:3.1:testCompile (default-testCompile) @ ejercicio_0 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to D:\Almacenamiento_W\Documentos\Educacion\UNAL\Semestre 6\Asignaturas\Computación paralela y distribuida\Trabajo\ejercicio_0\target\test-classes
+[INFO]
+[INFO] --- surefire:2.17:test (default-test) @ ejercicio_0 ---
+[WARNING] The parameter forkMode is deprecated since version 2.14. Use forkCount and reuseForks instead.
+[INFO] Surefire report directory: D:\Almacenamiento_W\Documentos\Educacion\UNAL\Semestre 6\Asignaturas\Computación paralela y distribuida\Trabajo\ejercicio_0\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running co.edu.unal.paralela.SetupTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.036 sec - in co.edu.unal.paralela.SetupTest
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.465 s
+[INFO] Finished at: 2026-05-10T06:24:02-05:00
+[INFO] ------------------------------------------------------------------------
+PS D:\Almacenamiento_W\Documentos\Educacion\UNAL\Semestre 6\Asignaturas\Computación paralela y distribuida\Trabajo\ejercicio_0>
