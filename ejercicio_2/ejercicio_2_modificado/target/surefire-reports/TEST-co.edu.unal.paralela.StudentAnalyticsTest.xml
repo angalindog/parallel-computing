@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="co.edu.unal.paralela.ReciprocalArraySumTest" time="39.725" tests="4" errors="0" skipped="0" failures="1">
+<testsuite name="co.edu.unal.paralela.StudentAnalyticsTest" time="2.404" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="21.0.9+10-LTS"/>
     <property name="sun.boot.library.path" value="D:\IDE_TOOLS\Java\jdk-21.0.9\bin"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Proyectos\S6\parallel-computing\ejercicio_1\ejercicio_1_modificado"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Proyectos\S6\parallel-computing\ejercicio_2\ejercicio_2_modificado"/>
     <property name="java.vm.vendor" value="Eclipse Adoptium"/>
     <property name="java.vendor.url" value="https://adoptium.net/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="CO"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Proyectos\S6\parallel-computing\ejercicio_1\ejercicio_1_modificado"/>
+    <property name="user.dir" value="C:\Proyectos\S6\parallel-computing\ejercicio_2\ejercicio_2_modificado"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="java.runtime.version" value="21.0.9+10-LTS"/>
     <property name="os.arch" value="amd64"/>
@@ -62,14 +62,10 @@
     <property name="java.vendor.version" value="Temurin-21.0.9+10"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testParManyTaskTwoHundredMillion" classname="co.edu.unal.paralela.ReciprocalArraySumTest" time="18.658">
-    <failure message="Se esperaba que la implmentación de muchas tareas en paralelo pudiera ejecutarse  6,400000x veces más rápido, pero solo alcanzo a mejorar la rapidez (speedup) 3,508475x veces" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Se esperaba que la implmentación de muchas tareas en paralelo pudiera ejecutarse  6,400000x veces más rápido, pero solo alcanzo a mejorar la rapidez (speedup) 3,508475x veces
-	at junit.framework.Assert.fail(Assert.java:47)
-	at junit.framework.Assert.assertTrue(Assert.java:20)
-	at co.edu.unal.paralela.ReciprocalArraySumTest.testParManyTaskTwoHundredMillion(ReciprocalArraySumTest.java:149)
-</failure>
-  </testcase>
-  <testcase name="testParSimpleTwoHundredMillion" classname="co.edu.unal.paralela.ReciprocalArraySumTest" time="20.666"/>
-  <testcase name="testParManyTaskTwoMillion" classname="co.edu.unal.paralela.ReciprocalArraySumTest" time="0.19"/>
-  <testcase name="testParSimpleTwoMillion" classname="co.edu.unal.paralela.ReciprocalArraySumTest" time="0.211"/>
+  <testcase name="testAverageAgeOfEnrolledStudents" classname="co.edu.unal.paralela.StudentAnalyticsTest" time="0.257"/>
+  <testcase name="testAverageAgeOfEnrolledStudentsPerf" classname="co.edu.unal.paralela.StudentAnalyticsTest" time="0.34"/>
+  <testcase name="testMostCommonFirstNameOfInactiveStudents" classname="co.edu.unal.paralela.StudentAnalyticsTest" time="0.368"/>
+  <testcase name="testCountNumberOfFailedStudentsOlderThan20" classname="co.edu.unal.paralela.StudentAnalyticsTest" time="0.167"/>
+  <testcase name="testCountNumberOfFailedStudentsOlderThan20Perf" classname="co.edu.unal.paralela.StudentAnalyticsTest" time="0.264"/>
+  <testcase name="testMostCommonFirstNameOfInactiveStudentsPerf" classname="co.edu.unal.paralela.StudentAnalyticsTest" time="1.008"/>
 </testsuite>

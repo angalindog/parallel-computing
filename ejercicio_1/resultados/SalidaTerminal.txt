@@ -1,0 +1,79 @@
+PS C:\Proyectos\S6\parallel-computing\ejercicio_1\ejercicio_1_modificado> mvn compile
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------< co.edu.unal.paralela:ejercicio_1 >------------------
+[INFO] Building ejercicio_1 0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- resources:3.4.0:resources (default-resources) @ ejercicio_1 ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO]
+[INFO] --- compiler:3.1:compile (default-compile) @ ejercicio_1 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to C:\Proyectos\S6\parallel-computing\ejercicio_1\ejercicio_1_modificado\target\classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.452 s
+[INFO] Finished at: 2026-05-30T02:56:30-05:00
+[INFO] ------------------------------------------------------------------------
+PS C:\Proyectos\S6\parallel-computing\ejercicio_1\ejercicio_1_modificado> mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------< co.edu.unal.paralela:ejercicio_1 >------------------
+[INFO] Building ejercicio_1 0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- resources:3.4.0:resources (default-resources) @ ejercicio_1 ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO]
+[INFO] --- compiler:3.1:compile (default-compile) @ ejercicio_1 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to C:\Proyectos\S6\parallel-computing\ejercicio_1\ejercicio_1_modificado\target\classes
+[INFO]
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ ejercicio_1 ---
+[INFO] skip non existing resourceDirectory C:\Proyectos\S6\parallel-computing\ejercicio_1\ejercicio_1_modificado\src\test\resources
+[INFO]
+[INFO] --- compiler:3.1:testCompile (default-testCompile) @ ejercicio_1 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- surefire:2.17:test (default-test) @ ejercicio_1 ---
+[WARNING] The parameter forkMode is deprecated since version 2.14. Use forkCount and reuseForks instead.
+[INFO] Surefire report directory: C:\Proyectos\S6\parallel-computing\ejercicio_1\ejercicio_1_modificado\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running co.edu.unal.paralela.ReciprocalArraySumTest
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 40.54 sec <<< FAILURE! - in co.edu.unal.paralela.ReciprocalArraySumTest
+testParManyTaskTwoHundredMillion(co.edu.unal.paralela.ReciprocalArraySumTest)  Time elapsed: 19.08 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: Se esperaba que la implmentaci├│n de muchas tareas en paralelo pudiera ejecutarse  6,400000x veces m├ís r├ípido, pero solo alcanzo a mejorar la rapidez (speedup) 2,928571x veces
+        at junit.framework.Assert.fail(Assert.java:47)
+        at junit.framework.Assert.assertTrue(Assert.java:20)
+        at co.edu.unal.paralela.ReciprocalArraySumTest.testParManyTaskTwoHundredMillion(ReciprocalArraySumTest.java:149)
+
+
+Results :
+
+Failed tests:
+  co.edu.unal.paralela.ReciprocalArraySumTest#testParManyTaskTwoHundredMillion AssertionFailedError
+
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0
+
+[ERROR] There are test failures.
+
+Please refer to C:\Proyectos\S6\parallel-computing\ejercicio_1\ejercicio_1_modificado\target\surefire-reports for the individual test results.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  42.692 s
+[INFO] Finished at: 2026-05-30T02:57:46-05:00
+[INFO] ------------------------------------------------------------------------
+PS C:\Proyectos\S6\parallel-computing\ejercicio_1\ejercicio_1_modificado>
+
