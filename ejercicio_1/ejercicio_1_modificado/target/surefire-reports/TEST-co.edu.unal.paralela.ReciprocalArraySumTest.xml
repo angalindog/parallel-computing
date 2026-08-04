@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="co.edu.unal.paralela.ReciprocalArraySumTest" time="39.725" tests="4" errors="0" skipped="0" failures="1">
+<testsuite name="co.edu.unal.paralela.ReciprocalArraySumTest" time="46.87" tests="4" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="21.0.9+10-LTS"/>
@@ -29,7 +29,7 @@
     <property name="classworlds.conf" value="D:\IDE_TOOLS\Maven\apache-maven-3.9.15-bin\apache-maven-3.9.15\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="stdout.encoding" value="cp850"/>
-    <property name="java.library.path" value="D:\IDE_TOOLS\Java\jdk-21.0.9\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\IDE_TOOLS\Python\Python314\Scripts\;D:\IDE_TOOLS\Python\Python314\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\IDE_TOOLS\nodejs\;C:\Program Files\Docker\Docker\resources\bin;D:\IDE_TOOLS\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Cloudflare\Cloudflare WARP\;C:\Users\Andres\AppData\Local\Microsoft\WindowsApps;C:\Users\Andres\AppData\Local\Programs\Antigravity\bin;C:\Users\Andres\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2025.3.1.1\bin;D:\IDE_TOOLS\nodejs\npm_global;D:\IDE_TOOLS\bun\bun_install\bin;D:\IDE_TOOLS\Python\Python314;D:\IDE_TOOLS\Python\Python314\Scripts;D:\IDE_TOOLS\Java\jdk-21.0.9\bin;D:\IDE_TOOLS\Go\go\bin;D:\IDE_TOOLS\Go\go_projects\bin;D:\IDE_TOOLS\SQLite;C:\Users\Andres\AppData\Local\GitHubDesktop\bin;C:\Users\Andres\.lmstudio\bin;D:\IDE_TOOLS\LaTeX\MikTeX\miktex\bin\x64\;C:\Program Files\Processing\;D:\IDE_TOOLS\Maven\apache-maven-3.9.15-bin\apache-maven-3.9.15\bin;;."/>
+    <property name="java.library.path" value="D:\IDE_TOOLS\Java\jdk-21.0.9\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\IDE_TOOLS\Python\Python314\Scripts\;D:\IDE_TOOLS\Python\Python314\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\IDE_TOOLS\nodejs\;C:\Program Files\Docker\Docker\resources\bin;D:\IDE_TOOLS\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Cloudflare\Cloudflare WARP\;C:\Users\Andres\AppData\Local\Microsoft\WindowsApps;C:\Users\Andres\AppData\Local\Programs\Antigravity\bin;C:\Users\Andres\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2025.3.1.1\bin;D:\IDE_TOOLS\nodejs\npm_global;D:\IDE_TOOLS\bun\bun_install\bin;D:\IDE_TOOLS\Python\Python314;D:\IDE_TOOLS\Python\Python314\Scripts;D:\IDE_TOOLS\Java\jdk-21.0.9\bin;D:\IDE_TOOLS\Go\go\bin;D:\IDE_TOOLS\Go\go_projects\bin;D:\IDE_TOOLS\SQLite;C:\Users\Andres\AppData\Local\GitHubDesktop\bin;C:\Users\Andres\.lmstudio\bin;D:\IDE_TOOLS\LaTeX\MikTeX\miktex\bin\x64\;C:\Program Files\Processing\;D:\IDE_TOOLS\Maven\apache-maven-3.9.15-bin\apache-maven-3.9.15\bin;C:\Users\Andres\AppData\Local\Programs\Antigravity IDE\bin;C:\Users\Andres\AppData\Local\Programs\cursor\resources\app\bin;."/>
     <property name="maven.conf" value="D:\IDE_TOOLS\Maven\apache-maven-3.9.15-bin\apache-maven-3.9.15/conf"/>
     <property name="jdk.debug" value="release"/>
     <property name="java.class.version" value="65.0"/>
@@ -45,7 +45,7 @@
     <property name="java.class.path" value="D:\IDE_TOOLS\Maven\apache-maven-3.9.15-bin\apache-maven-3.9.15\boot\plexus-classworlds-2.9.0.jar"/>
     <property name="java.vm.specification.version" value="21"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test"/>
     <property name="java.home" value="D:\IDE_TOOLS\Java\jdk-21.0.9"/>
     <property name="user.language" value="es"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -62,14 +62,14 @@
     <property name="java.vendor.version" value="Temurin-21.0.9+10"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testParManyTaskTwoHundredMillion" classname="co.edu.unal.paralela.ReciprocalArraySumTest" time="18.658">
-    <failure message="Se esperaba que la implmentación de muchas tareas en paralelo pudiera ejecutarse  6,400000x veces más rápido, pero solo alcanzo a mejorar la rapidez (speedup) 3,508475x veces" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Se esperaba que la implmentación de muchas tareas en paralelo pudiera ejecutarse  6,400000x veces más rápido, pero solo alcanzo a mejorar la rapidez (speedup) 3,508475x veces
+  <testcase name="testParManyTaskTwoHundredMillion" classname="co.edu.unal.paralela.ReciprocalArraySumTest" time="22.265">
+    <failure message="Se esperaba que la implmentación de muchas tareas en paralelo pudiera ejecutarse  6,400000x veces más rápido, pero solo alcanzo a mejorar la rapidez (speedup) 3,089744x veces" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Se esperaba que la implmentación de muchas tareas en paralelo pudiera ejecutarse  6,400000x veces más rápido, pero solo alcanzo a mejorar la rapidez (speedup) 3,089744x veces
 	at junit.framework.Assert.fail(Assert.java:47)
 	at junit.framework.Assert.assertTrue(Assert.java:20)
 	at co.edu.unal.paralela.ReciprocalArraySumTest.testParManyTaskTwoHundredMillion(ReciprocalArraySumTest.java:149)
 </failure>
   </testcase>
-  <testcase name="testParSimpleTwoHundredMillion" classname="co.edu.unal.paralela.ReciprocalArraySumTest" time="20.666"/>
-  <testcase name="testParManyTaskTwoMillion" classname="co.edu.unal.paralela.ReciprocalArraySumTest" time="0.19"/>
-  <testcase name="testParSimpleTwoMillion" classname="co.edu.unal.paralela.ReciprocalArraySumTest" time="0.211"/>
+  <testcase name="testParSimpleTwoHundredMillion" classname="co.edu.unal.paralela.ReciprocalArraySumTest" time="24.152"/>
+  <testcase name="testParManyTaskTwoMillion" classname="co.edu.unal.paralela.ReciprocalArraySumTest" time="0.213"/>
+  <testcase name="testParSimpleTwoMillion" classname="co.edu.unal.paralela.ReciprocalArraySumTest" time="0.24"/>
 </testsuite>

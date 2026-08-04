@@ -54,8 +54,8 @@ public final class StudentAnalytics {
         //-------------------------------------------------------------------------------------
         return Stream.of(studentArray) // Convierte el array en un stream secuencial
                 .parallel()  // Le indica al framework fork/join de java a dividir el stream en subtareas y procesarlas en varios hilos según los núcleos paralelos. Internamente, usa el ForkJoinPool común.
-                .filter(Student::checkIsCurrent) // Filtra los estudiantes activos, es una referencia de método equivalente a lambda s -> s.checkIsCurrent(), y descarta los estudiantes inactivos. Aquí no se requiere de ciclo for, y se aplica concurrentemente a cada segmento del arreglo.
-                .mapToDouble(Student::getAge)  // transforma el stream<student> en doubleStream extrayendo la edad de cada estudiante, es una referencia de método equivalente a lambda s -> s.getAge(), que luego se empleara en el calculo del promedio con Average.
+                .filter(Student::checkIsCurrent) // Filtra los estudiantes activos, es una referencia de metodo equivalente a lambda s -> s.checkIsCurrent(), y descarta los estudiantes inactivos. Aquí no se requiere de ciclo for, y se aplica concurrentemente a cada segmento del arreglo.
+                .mapToDouble(Student::getAge)  // transforma el stream<student> en doubleStream extrayendo la edad de cada estudiante, es una referencia de metodo equivalente a lambda s -> s.getAge(), que luego se empleara en el calculo del promedio con Average.
                 .average()  // Es la operación final que suma todas las edades y las divide por la cantidad de estudiantes activos de forma paralela, retorna un optional Double
                 .orElse(0.0); // Se encarga de desenvolver el optional double; en caso de que el stream estuviera vacío devuelve 0.0 en lugar de arrojar una excepción.
         //throw new UnsupportedOperationException();

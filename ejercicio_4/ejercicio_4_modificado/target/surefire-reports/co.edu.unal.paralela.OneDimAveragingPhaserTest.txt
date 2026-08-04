@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: co.edu.unal.paralela.OneDimAveragingPhaserTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 91.053 sec <<< FAILURE! - in co.edu.unal.paralela.OneDimAveragingPhaserTest
+testFuzzyBarrier(co.edu.unal.paralela.OneDimAveragingPhaserTest)  Time elapsed: 91.042 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: It was expected that the fuzzy barrier parallel implementation would run 1,100000x faster than the barrier implementation, but it only achieved 1,059010x speedup
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at co.edu.unal.paralela.OneDimAveragingPhaserTest.testFuzzyBarrier(OneDimAveragingPhaserTest.java:122)
+

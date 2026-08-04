@@ -162,18 +162,18 @@ public final class ReciprocalArraySum {
         ReciprocalArraySumTask[] tasks = new ReciprocalArraySumTask[numTasks]; // Se crea un arreglo de tareas para almacenar las tareas que se van a crear
         for (int i = 0; i < numTasks; i++){
             tasks[i] = new ReciprocalArraySumTask( // Se crean las tareas para cada sección del arreglo utilizando los métodos getChunkStartInclusive y getChunkEndExclusive para determinar los índices de inicio y fin de cada sección
-                    getChunkStartInclusive(i, numTasks, input.length),// Se calcula el índice de inicio para la sección i utilizando el método getChunkStartInclusive, que toma en cuenta el número total de tareas y el tamaño del arreglo de entrada para determinar el punto de inicio de cada sección
+                    getChunkStartInclusive(i, numTasks, input.length),// Se calcula el índice de inicio para la sección i utilizando el metodo getChunkStartInclusive, que toma en cuenta el número total de tareas y el tamaño del arreglo de entrada para determinar el punto de inicio de cada sección
                     getChunkEndExclusive(i, numTasks, input.length),
-                    input // Se calcula el índice de fin para la sección i utilizando el método getChunkEndExclusive, que también toma en cuenta el número total de tareas y el tamaño del arreglo de entrada para determinar el punto de fin de cada sección
+                    input // Se calcula el índice de fin para la sección i utilizando el metodo getChunkEndExclusive, que también toma en cuenta el número total de tareas y el tamaño del arreglo de entrada para determinar el punto de fin de cada sección
             );
         }
         for (int i = 0; i < numTasks -1 ; i++){ // Se ejecuta cada tarea en paralelo excepto la última, que se ejecuta en el hilo actual para permitir que todas las tareas se ejecuten en paralelo
-            tasks[i].fork(); // Se ejecuta la tarea i en paralelo utilizando el método fork, lo que permite que cada tarea se ejecute en un hilo separado y se aproveche el paralelismo para calcular la suma de los recíprocos de cada sección del arreglo de entrada
+            tasks[i].fork(); // Se ejecuta la tarea i en paralelo utilizando el metodo fork, lo que permite que cada tarea se ejecute en un hilo separado y se aproveche el paralelismo para calcular la suma de los recíprocos de cada sección del arreglo de entrada
         }
         tasks[numTasks -1].compute(); // Se ejecuta la última tarea en el hilo actual
 
         double sum = tasks[numTasks -1].getValue(); // Se obtiene el resultado de la última tarea, que se ejecutó en el hilo actual, para iniciar la suma total de los recíprocos del arreglo de entrada
-        for (int i = numTasks -2; i>=0; i--) { // Se espera a que cada tarea termine utilizando el método join para poder obtener su resultado y sumarlo al resultado total, comenzando desde la penúltima tarea hasta la primera, ya que la última tarea se ejecutó en el hilo actual y su resultado ya se obtuvo
+        for (int i = numTasks -2; i>=0; i--) { // Se espera a que cada tarea termine utilizando el metodo join para poder obtener su resultado y sumarlo al resultado total, comenzando desde la penúltima tarea hasta la primera, ya que la última tarea se ejecutó en el hilo actual y su resultado ya se obtuvo
             tasks[i].join();
             sum += tasks[i].getValue(); // Se suma el resultado de la tarea i al resultado total
         }
